@@ -28,15 +28,12 @@ def iteratedirectory(some_list):
 
 iteratedirectory(students)
 
-def iteratedirectory2(key_name, some_list):
+def iteratedirectory2(some_list):
     for i in (some_list):
-        if key_name == 'first_name':
             print(f"{i['first_name']}")
-        if key_name == 'last_name':
+    for i in (some_list):
             print(f"{i['last_name']}")
-            
-iteratedirectory2('first_name', students)
-iteratedirectory2('last_name', students)
+iteratedirectory2(students)
 
 dojo = {
    'locations': ['San Jose', 'Seattle', 'Dallas', 'Chicago', 'Tulsa', 'DC', 'Burbank'],
@@ -49,7 +46,7 @@ dojo = {
 def printinfo(another_list):
     for item in another_list:
         print(f"{len(another_list[item])} {item.upper()}")
-        for i in range(len(another_list[item])):
-            print(another_list[item][i])
+        for i in another_list[item]:
+            print(i)
 
 printinfo(dojo)
