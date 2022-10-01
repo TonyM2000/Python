@@ -15,11 +15,25 @@ class BankAccount:
         return self
     def display_account_info(self):
         print("Your balance is $",self.balance,"and your interest rate is", self.int_rate)
+        return self
     def yield_interest(self):
         self.balance = self.balance*(1+self.int_rate)
         return self
-        
-account1 = BankAccount(.01, 500)
-account2 = BankAccount(.03, 10000)
-account1.deposit(100).deposit(200).deposit(300).withdraw(250).yield_interest().display_account_info()
-account2.deposit(1250).deposit(1250).withdraw(150).withdraw(75).withdraw(420).withdraw(175).yield_interest().display_account_info()
+
+class User:
+    def __init__(self,name,email):
+        self.name = name
+        self.email = email
+        self.account = BankAccount(int_rate=0.02, balance=0)
+    def make_deposit(self,amount):
+        self.account.deposit(amount)
+        return self
+    def make_withdraw(self, amount):
+        self.account.withdraw(amount)
+        return self
+    def display_balance(self):
+        self.account.display_account_info()
+        return self
+
+user1= User("Anthony","Anthony@Anthony.com")
+user1.make_deposit(500).make_deposit(100).make_withdraw(50)
