@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Counter</title>
+</head>
+
+<body>
+    <div class='d-flex justify-content-center'>
+        <div>{{visits}}
+        </div>
+        <div>
+            <a class="btn btn-secondary" href="destroy_session">Reset</a>
+        </div>
+        <div>
+            <a class="btn btn-primary" href="add">ADD+{{banana}}</a>
+        </div>
+        <div>
+            <form action="processing" method="POST">
+                <!-- # The action is processing -->
+            <input type="number" name="addition" placeholder="put a number in me ;)"></input>
+            <input type="submit"></input>
+            </form>
+            <!-- THIS IS THE REQUEST FORM -->
+        </div>
+        <div>{{visitcount}}</div>
+    </div>
+</body>
+
+</html>
