@@ -29,3 +29,13 @@ print(exp_string.format(years_experience))
 print("I started in the field when I was ", int(age - years_experience)," years old.")
 # Desired output: I started in the field when I was 31 years old.
 
+# Challenge 1:
+#   Fill in the missing code for the full_name function.
+#   Be sure to add the 2 parameters (and name them appropriately)
+#   Return the full name to get the desired output!
+
+def full_name(firstname,lastname):
+    print(firstname,lastname)
+
+name1 = full_name("Eddie", "Aikau")
+name1
